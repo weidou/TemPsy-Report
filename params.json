@@ -1,0 +1,6 @@
+{
+  "name": "TemPsy-Report",
+  "tagline": "Public website for TemPsy-Report",
+  "body": "Welcome to TemPsy-Report\r\n==========\r\n\r\nTemPsy-Report is a tool for collecting violation information from a faulty execution trace that is in violation of [*TemPsy* properties](https://github.com/weidou/TemPsy-Check#properties). The tool has been developed by [Wei Dou](http://people.svv.lu/dou), at the [SVV lab](http://www.svv.lu) of the [University of Luxembourg](http://wwwen.uni.lu).",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
