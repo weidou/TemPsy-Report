@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/lu.svv.offline/src" modelPluginID="lu.svv.offline" modelName="Check"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>check.ecore</foreignModel>
+  <genPackages prefix="Check" basePackage="lu.svv.offline" disposableProviderFactory="true"
+      ecorePackage="check.ecore#/">
+    <genClasses ecoreClass="check.ecore#//Monitor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference check.ecore#//Monitor/trace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference check.ecore#//Monitor/properties"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Trace" basePackage="lu.svv.offline" disposableProviderFactory="true"
+      ecorePackage="trace.ecore#/">
+    <genClasses ecoreClass="trace.ecore#//Trace">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trace.ecore#//Trace/traceElements"/>
+    </genClasses>
+    <genClasses ecoreClass="trace.ecore#//TraceElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trace.ecore#//TraceElement/event"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trace.ecore#//TraceElement/timestamp"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Tempsy" basePackage="lu.svv.offline" disposableProviderFactory="true"
+      ecorePackage="tempsy.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tempsy.ecore#//ScopeType">
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//ScopeType/GLOBALLY"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//ScopeType/BEFORE"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//ScopeType/AFTER"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//ScopeType/BETWEENAND"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//ScopeType/AFTERUNTIL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tempsy.ecore#//PatternType">
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//PatternType/UNIVERSALITY"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//PatternType/EXISTENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//PatternType/ABSENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//PatternType/PRECEDENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//PatternType/RESPONSE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tempsy.ecore#//ComparingOperator">
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//ComparingOperator/ATLEAST"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//ComparingOperator/ATMOST"/>
+      <genEnumLiterals ecoreEnumLiteral="tempsy.ecore#//ComparingOperator/EXACTLY"/>
+    </genEnums>
+    <genClasses ecoreClass="tempsy.ecore#//TemPsyBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//TemPsyBlock/temPsyExpressions"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//TemPsyExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tempsy.ecore#//TemPsyExpression/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//TemPsyExpression/scope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//TemPsyExpression/pattern"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//Scope">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tempsy.ecore#//Scope/scopeType"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//Pattern">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tempsy.ecore#//Pattern/patternType"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//Globally"/>
+    <genClasses ecoreClass="tempsy.ecore#//UniScope">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//UniScope/boundary"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//BiScope">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//BiScope/boundaryBegin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//BiScope/boundaryEnd"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//Boundary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tempsy.ecore#//Boundary/ordinal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//Boundary/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//Boundary/timeDistance"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//Universality">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//Universality/event"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//OccurrencePattern">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tempsy.ecore#//OccurrencePattern/comparingOperator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tempsy.ecore#//OccurrencePattern/times"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//OccurrencePattern/event"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//OrderPattern">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//OrderPattern/block1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//OrderPattern/timeDistance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//OrderPattern/block2"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//EventChainElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//EventChainElement/timeDistance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tempsy.ecore#//EventChainElement/event"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//EventRepresentation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tempsy.ecore#//EventRepresentation/name"/>
+    </genClasses>
+    <genClasses ecoreClass="tempsy.ecore#//TimeDistance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tempsy.ecore#//TimeDistance/comparingOperator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tempsy.ecore#//TimeDistance/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
