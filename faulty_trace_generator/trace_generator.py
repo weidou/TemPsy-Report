@@ -700,7 +700,7 @@ class Distance(object):
 # program entry
 if __name__ == '__main__':
   cmdline = argparse.ArgumentParser(
-      usage='usage: trace_generator.py -i id -p pattern',
+      usage='trace_generator.py -i id -p pattern',
       description='Generate a set of faulty traces for the evaluation of scalability of our violation reporting approach.')
   cmdline.add_argument(
       '--id',
