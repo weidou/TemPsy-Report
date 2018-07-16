@@ -4,7 +4,7 @@ public class Main {
 
 	private static long startTime, stopTime, elapsedTime;
 	private static TraceReport tc = new TraceReport();
-	private static double parseTime = 1379.52;
+	private static double parseTime = 1379.52;// Average parsing time.
 
 	public static void main(String[] args) throws Exception {
 		tc.parseReportOCL();
@@ -15,7 +15,8 @@ public class Main {
         int fixedViolationNumber = 1000;
         String name;
 
-        System.out.println("rq1(fixed violation number : 1K)");
+        // Corresponds to Figure 3 in our MODELS 2018 paper.
+        System.out.println("rq1(fixed violation number : 1K, various lengths: 100K, 200K, ..., 1M)");
         for (int pIndex : pGloballyIndexes) {
         	name = "p" + pIndex;
         	System.out.println();
@@ -26,7 +27,9 @@ public class Main {
         }
 
     	System.out.println();
-        System.out.println("\nrq2(fixed trace length : 1M)");
+    	
+        // Corresponds to Figure 4 in our MODELS 2018 paper.
+        System.out.println("\nrq2(fixed trace length : 1M, various violation numbers: 1K, 2K, ..., 10K)");
         for (int pIndex : pGloballyIndexes) {
         	name = "p" + pIndex;
         	System.out.println();
@@ -41,7 +44,7 @@ public class Main {
 		String traceName = rq + "_" + name + "_" + length + "_" + vn;
 		startTime = System.currentTimeMillis();
 		for (int i = 0; i < 100; i++) {
-			tc.loadMonitor("../lu.svv.offline/inputs/properties/" + name + ".xmi", "../lu.svv.offline/inputs/traces/" + traceName+ ".csv");
+			tc.loadMonitor("./inputs/properties/" + name + ".xmi", "./inputs/traces/" + traceName+ ".csv");
 			tc.reportSingle();
 		}
 		stopTime = System.currentTimeMillis();
