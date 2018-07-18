@@ -1,7 +1,7 @@
 Welcome to TemPsy-Report
 ==========
 
-TemPsy-Report is a software program that performs model-driven trace diagnostics of *TemPsy* properties. It is published as an Eclipse project with the [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0). The program was developed by [Wei Dou](https://github.com/weidou) during his PhD research at the [SVV lab](http://www.svv.lu) of the [University of Luxembourg](http://wwwen.uni.lu).
+TemPsy-Report is a software program that performs model-driven trace diagnostics of *TemPsy* properties. It is published at https://doi.org/10.6084/m9.figshare.6797171 as an Eclipse project with the [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0). The program was developed by [Wei Dou](https://github.com/weidou) during his PhD research at the [SVV lab](http://www.svv.lu) of the [University of Luxembourg](http://wwwen.uni.lu).
 More information about TemPsy-Report can be found in this paper:
 
 > Wei Dou, Domenico Bianculli, and Lionel Briand. __Model-Driven Trace Diagnostics for Pattern-based Temporal Specifications__. MODELS 2018
@@ -14,9 +14,10 @@ More information about TemPsy-Report can be found in this paper:
 Requirements
 ---
 * Mac OS X / Linux
-* [Eclipse DSL Tools v. 4.6.0M3](http://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/neonm3)+,
 * Java 1.7+
+* [Eclipse DSL Tools v. 4.6.0M3](http://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/neonm3)+,
 * [Eclipse OCL 6.0.1](http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&hlbuild=R201509081048&project=ocl#R201509081048)+
+
 
 Usage of TemPsy-Report
 ---
@@ -40,3 +41,8 @@ The Python program runs with 2 parameters:
   For instance:
   ```./trace_generator.py -p'always a' -i p1```
   corresponds to generating traces for the diagnostics of p1 that was presented in the evaluation section of our MODELS 2018 paper.
+ 
+#### Tempsy-Violation-Visualization
+The code of Tempsy-Violation-Visualization is publicly available at <https://github.com/weidou/TemPsy-Violation-Visualization>.
+Please notice that TemPsy-Report contains all the code to reproduce the experiments corresponding to the evaluation section (section 6) of our MODELS paper,
+and we decided to keep the code that connects TemPsy-Report and Tempsy-Violation-Visualization for the moment for publication reasons.
